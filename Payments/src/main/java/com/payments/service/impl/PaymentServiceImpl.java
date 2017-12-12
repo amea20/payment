@@ -1,6 +1,5 @@
 package com.payments.service.impl;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -14,7 +13,7 @@ import com.payments.service.PaymentService;
 public class PaymentServiceImpl implements PaymentService {
 
 	public List<Payment> getListOfPayments (List<Payment> payments, String sortType) {
-		payments.sort(Comparator.naturalOrder());
+		payments.sort(Comparator.comparing(Payment::getAmount));
 		
 		if (sortType.equalsIgnoreCase("date")) {
 			Collections.sort(payments,new Comparator<Payment>() {
