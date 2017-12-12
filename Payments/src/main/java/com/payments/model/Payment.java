@@ -14,6 +14,12 @@ public class Payment {
 	public Payment() {
 	}
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public double getAmount() {
 		return amount;
 	}
@@ -54,6 +60,7 @@ public class Payment {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((currency == null) ? 0 : currency.hashCode());
 		result = prime * result + destAccountNumber;
+		result = prime * result + id;
 		result = prime * result + ((paymentDate == null) ? 0 : paymentDate.hashCode());
 		result = prime * result + srcAccountNumber;
 		return result;
@@ -77,6 +84,8 @@ public class Payment {
 			return false;
 		if (destAccountNumber != other.destAccountNumber)
 			return false;
+		if (id != other.id)
+			return false;
 		if (paymentDate == null) {
 			if (other.paymentDate != null)
 				return false;
@@ -89,8 +98,9 @@ public class Payment {
 
 	@Override
 	public String toString() {
-		return "Payment [amount=" + amount + ", currency=" + currency + ", paymentDate=" + paymentDate
+		return "Payment [id=" + id + ", amount=" + amount + ", currency=" + currency + ", paymentDate=" + paymentDate
 				+ ", srcAccountNumber=" + srcAccountNumber + ", destAccountNumber=" + destAccountNumber + "]";
 	}
 
+	
 }

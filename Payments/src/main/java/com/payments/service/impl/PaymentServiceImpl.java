@@ -13,7 +13,7 @@ import com.payments.service.PaymentService;
 public class PaymentServiceImpl implements PaymentService {
 
 	public List<Payment> getListOfPayments (List<Payment> payments, String sortType) {
-		payments.sort(Comparator.comparing(Payment::getAmount));
+		payments.sort(Comparator.comparing(Payment::getId));
 		
 		if (sortType.equalsIgnoreCase("date")) {
 			Collections.sort(payments,new Comparator<Payment>() {
