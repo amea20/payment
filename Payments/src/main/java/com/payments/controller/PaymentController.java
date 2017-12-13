@@ -22,7 +22,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.payments.model.Payment;
 import com.payments.service.PaymentService;
 import com.payments.validation.PaymentValidator;
-import com.payments.webservice.PaymentWS;
 
 @Controller
 public class PaymentController {
