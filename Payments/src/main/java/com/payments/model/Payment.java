@@ -50,7 +50,7 @@ public class Payment {
 	public void setDestAccountNumber(int destAccountNumber) {
 		this.destAccountNumber = destAccountNumber;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

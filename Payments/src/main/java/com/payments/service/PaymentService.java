@@ -8,4 +8,5 @@ public interface PaymentService {
 
 	public List<Payment> getListOfPayments(List<Payment> payments, String sortType);
 	
+	public List<Payment> paymentsList();
 }
